@@ -1,5 +1,5 @@
 import React from 'react';
-import Toolbar from './Toolbar/Toolbar';
+import Toolbar from './components/Toolbar/Toolbar';
 
 function App() {
   return (
