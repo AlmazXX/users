@@ -1,10 +1,14 @@
 import React from 'react';
+import Toolbar from './Toolbar/Toolbar';
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <React.Fragment>
+      <header>
+        <Toolbar/>
+      </header>
+      <main></main>
+    </React.Fragment>
   );
 }
 
