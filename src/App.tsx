@@ -7,6 +7,10 @@ import { User } from "./types";
 function App() {
   const [users, setUsers] = useState<User[]>([])
 
+  const addUser = (user: User) => {
+    setUsers(prev => [...prev, user])
+  }
+  
   return (
     <React.Fragment>
       <header>
@@ -15,7 +19,7 @@ function App() {
       <main className="container-fluid">
         <div className="row mt-2">
           <div className="col-4">
-            <UserForm />
+            <UserForm onSubmit={addUser}/>
           </div>
           <div className="col-4">
             <Users />
