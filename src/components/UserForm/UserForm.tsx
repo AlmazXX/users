@@ -13,7 +13,9 @@ const UserForm: React.FC<Props> = ({ onSubmit }) => {
     status: false,
   });
 
-  const onUserChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const onUserChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
   };
@@ -28,6 +30,12 @@ const UserForm: React.FC<Props> = ({ onSubmit }) => {
     onSubmit({
       id: Date.now(),
       ...user,
+    });
+    setUser({
+      name: "",
+      email: "",
+      role: "",
+      status: false,
     });
   };
 
