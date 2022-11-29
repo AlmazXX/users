@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Toolbar from "../../components/Toolbar/Toolbar";
 import UserForm from "../../components/UserForm/UserForm";
 import Users from "../../components/Users/Users";
@@ -12,7 +12,7 @@ function App() {
   }
   
   return (
-    <React.Fragment>
+    <>
       <header>
         <Toolbar />
       </header>
@@ -26,7 +26,7 @@ function App() {
           </div>
         </div>
       </main>
-    </React.Fragment>
+    </>
   );
 }
 
